@@ -1,0 +1,7 @@
+# Usage: ansible-playbook --ask-become-pass local.yml
+---
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  remote_user: root
+  become: true
