@@ -1,0 +1,15 @@
+---
+- name: Install etckeeper
+  become: true
+  block:
+    - name: Install etckeeper package
+      dnf:
+        name: etckeeper
+        state: latest
+
+    # See: https://github.com/ansible/ansible/issues/54949
+    - name: Configure etckeeper.conf
+      lineinfile:
+        path: /etc/etckeeper/etckeeper.conf
+        regexp: "^GIT_COMMIT_OPTIONS=.*"
+        line: 'GIT_COMMIT_OPTIONS="-q"'
