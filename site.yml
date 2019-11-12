@@ -1,0 +1,32 @@
+# Usage:
+#   ansible-playbook --ask-become-pass -i localhost, site.yml --connection=local -e 'ansible_python_interpreter=/usr/bin/python3'
+#   ansible-playbook --ask-become-pass --ask-pass -i 192.168.122.239, site.yml
+---
+- hosts: all
+  gather_facts: false
+  remote_user: { { default_user_owner } }
+  become: true
+
+  tasks:
+    - name: Include task list
+      include_tasks: "{{ item }}"
+      with_fileglob:
+        - tasks/*.yml
+
+    - name: Copy etc files
+      copy:
+        src: files/etc/
+        dest: /etc
+
+    - name: Copy home files
+      copy:
+        src: files/home/
+        dest: /home
+        owner: { { default_user_owner } }
+        group: { { default_user_group } }
+
+---
+- hosts: all
+  tasks:
+    - include_role:
+        name: common

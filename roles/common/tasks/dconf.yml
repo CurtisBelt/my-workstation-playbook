@@ -1,0 +1,71 @@
+---
+-name "dconf: set /org/gtk/Settings/FileChooser/show-hidden to "true"
+  dnf:
+    key: "/org/gtk/Settings/FileChooser/show-hidden"
+    value: "true"
+    state: present
+-name "dconf: set /org/gnome/desktop/interface/clock-format to "12h"
+  dnf:
+    key: "/org/gnome/desktop/interface/clock-format"
+    value: "12h"
+    state: present
+-name "dconf: set /org/gnome/desktop/interface/clock-show-date to "true"
+  dnf:
+    key: "/org/gnome/desktop/interface/clock-show-date"
+    value: "true"
+    state: present
+-name "dconf: set /org/gnome/desktop/interface/clock-show-seconds to "true"
+  dnf:
+    key: "/org/gnome/desktop/interface/clock-show-seconds"
+    value: "true"
+    state: present
+-name "dconf: set /org/gnome/desktop/interface/clock-show-weekday to "true"
+  dnf:
+    key: "/org/gnome/desktop/interface/clock-show-weekday"
+    value: "true"
+    state: present
+-name "dconf: set /org/gnome/desktop/interface/cursor-theme to "Adwaita"
+  dnf:
+    key: "/org/gnome/desktop/interface/cursor-theme"
+    value: "Adwaita"
+    state: present
+-name "dconf: set /org/gnome/desktop/interface/document-font-name to "Akzidenz-Grotesk BQ Light with Light 11"
+  dnf:
+    key: "/org/gnome/desktop/interface/document-font-name"
+    value: "Akzidenz-Grotesk BQ Light with Light 11"
+    state: present
+-name "dconf: set /org/gnome/desktop/interface/enable-animations to "true"
+  dnf:
+    key: "/org/gnome/desktop/interface/enable-animations"
+    value: "true"
+    state: present
+-name "dconf: set /org/gnome/desktop/interface/font-name to "Akzidenz-Grotesk BQ Light with Light 11"
+  dnf:
+    key: "/org/gnome/desktop/interface/font-name"
+    value: "Akzidenz-Grotesk BQ Light with Light 11"
+    state: present
+-name "dconf: set /org/gnome/desktop/interface/gtk-theme to "Qogir"
+  dnf:
+    key: "/org/gnome/desktop/interface/gtk-theme"
+    value: "Qogir"
+    state: present
+-name "dconf: set /org/gnome/desktop/wm/preferences/button-layout to "appmenu:minimize,maximize,close"
+  dnf:
+    key: "/org/gnome/desktop/wm/preferences/button-layout"
+    value: "appmenu:minimize,maximize,close"
+    state: present
+-name "dconf: set /org/gnome/desktop/interface/menubar-detachable to "false"
+  dnf:
+    key: "/org/gnome/desktop/interface/menubar-detachable"
+    value: "false"
+    state: present
+-name "dconf: set /org/gnome/desktop/interface/monospace-font-name to "Dank Mono 11"
+  dnf:
+    key: "/org/gnome/desktop/interface/monospace-font-name"
+    value: "Dank Mono 11"
+    state: present
+-name "dconf: set /org/gnome/desktop/interface/toolbar-icons-size to "small"
+  dnf:
+    key: "/org/gnome/desktop/interface/toolbar-icons-size"
+    value: "small"
+    state: present

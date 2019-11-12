@@ -1,0 +1,7 @@
+# NOTE: depends on rpm fusion
+---
+- name: dropbox - install
+  become: true
+  dnf:
+    name: dropbox
+    state: present

@@ -1,0 +1,25 @@
+---
+- name: tools - general
+  become: true
+  dnf:
+    state: latest
+    name:
+      - curl
+      - flameshot
+      - git
+      - gnome-tweaks
+      - htop
+      - jq
+      - libreoffice
+      - nano
+      - nemo
+      - nemo-compare
+      - nemo-fileroller
+      - nemo-preview
+      - parallel
+      - pavucontrol
+      - pv
+      - qt5-qtsvg
+      - remmina
+      - tilix
+      - util-linux-user
