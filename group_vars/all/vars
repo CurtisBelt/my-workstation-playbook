@@ -1,0 +1,5 @@
+---
+ansible_python_interpreter: /usr/bin/python3
+user_owner: curtis
+user_group: curtis
+github_access_token: {{ vault_github_access_token }}
